@@ -1,0 +1,57 @@
+split.csv: 858213 rows. scores.csv: 750305 rows.
+
+Rows per dataset and split
+--------------------------
+   dataset      split   rows  positive  negative  positive %
+    BODMAS      train  92844     38847     53997       41.84
+    BODMAS validation  15064      6686      8378       44.38
+    BODMAS       test  18575     10344      8231       55.69
+EMBER 2018       test 686882    353614    333268       51.48
+ UCSB Wild       test  44848     28665     16183       63.92
+
+Metrics per test set (threshold 0.6765; positive when score >= threshold)
+-------------------------------------------------------------------------
+Each value is followed by its 95% bootstrap interval in brackets.
+
+Test set: BODMAS held-out
+  test rows                 18575
+  positive rows             10344 (55.69%)
+  negative rows             8231 (44.31%)
+  bootstrap resamples       1000
+  random-scorer AP          0.5569 (equals the positive share)
+  random-scorer AUROC       0.5000
+  precision                 0.8451 [0.8310, 0.8579]
+  recall                    0.2105 [0.2026, 0.2184]
+  false-positive rate       0.0485 [0.0442, 0.0529]
+  AP                        0.6902 [0.6811, 0.6993]
+  AUROC                     0.6103 [0.6022, 0.6184]
+
+Test set: EMBER external
+  test rows                 686882
+  positive rows             353614 (51.48%)
+  negative rows             333268 (48.52%)
+  bootstrap resamples       200
+  random-scorer AP          0.5148 (equals the positive share)
+  random-scorer AUROC       0.5000
+  precision                 0.6029 [0.6001, 0.6061]
+  recall                    0.1725 [0.1713, 0.1737]
+  false-positive rate       0.1206 [0.1195, 0.1217]
+  AP                        0.6113 [0.6096, 0.6131]
+  AUROC                     0.6337 [0.6325, 0.6350]
+
+Test set: UCSB Wild external
+  test rows                 44848
+  positive rows             28665 (63.92%)
+  negative rows             16183 (36.08%)
+  bootstrap resamples       1000
+  random-scorer AP          0.6392 (equals the positive share)
+  random-scorer AUROC       0.5000
+  precision                 0.8264 [0.8196, 0.8333]
+  recall                    0.3039 [0.2986, 0.3091]
+  false-positive rate       0.1131 [0.1083, 0.1179]
+  AP                        0.7731 [0.7675, 0.7782]
+  AUROC                     0.6387 [0.6336, 0.6431]
+
+Warnings
+--------
+None.
